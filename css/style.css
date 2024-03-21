@@ -46,6 +46,7 @@ header {
   z-index: 1000;
   transition: 0.6s;
   border-bottom: 0.2px solid #333;
+  background-color: #333;
 }
 header .nav {
   display: flex;
@@ -60,8 +61,12 @@ header .nav .first {
 header .nav .first .logo {
   font-size: 1.6rem;
   font-family: "Jim Nightshade", cursive;
-  color: #A22657;
+  color: #fff;
   padding-right: 3rem;
+  transition: 0.7s;
+}
+header .nav .first .logo:hover {
+  color: #F1558E;
 }
 header .nav .first ul {
   display: flex;
@@ -70,22 +75,55 @@ header .nav .first ul li {
   padding: 1.2rem 1.2rem;
 }
 header .nav .first ul li a {
-  color: #333;
+  color: #fff;
   font-size: 1.3rem;
   transition: 0.8s;
 }
 header .nav .first ul li:hover a {
   color: #F1558E;
 }
+header .nav .first ul .drop {
+  padding: 1.2rem 0.7rem;
+  font-size: 1.3rem;
+}
+header .nav .first ul .drop a {
+  color: #fff;
+}
+header .nav .first ul .drop a i {
+  font-size: 0.6rem;
+}
+header .nav .first ul .drop a:hover {
+  color: #F1558E;
+}
+header .nav .first ul .drop__down {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
+  opacity: 0.9;
+}
+header .nav .first ul .drop__down a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+header .nav .first ul .drop:hover .drop__down {
+  display: block;
+  background-color: #333;
+}
 header .nav .second .icons {
   display: flex;
 }
 header .nav .second .icons .icon {
-  color: #333;
+  color: #fff;
   padding: 1rem;
   margin-left: 0.6rem;
   font-size: 1.5rem;
   cursor: pointer;
+}
+header .nav .second .icons .icon:hover {
+  background-color: #F1558E;
+  color: #A22657;
 }
 
 #menu-btn {
@@ -96,18 +134,23 @@ header .nav .second .icons .icon {
   width: 100%;
   position: relative;
   overflow-x: hidden;
+  background: url(../images/home-bg.jpg);
 }
 .hero__container {
   transition: ease-in-out;
 }
 .hero__container-item {
+  display: flex;
+  align-items: center;
   position: relative;
+  justify-content: flex-end;
   transition: ease-in-out;
 }
 .hero__container-item .data {
   position: absolute;
   top: 30rem;
   left: 8rem;
+  z-index: 100;
 }
 .hero__container-item .data h2 {
   color: #A22657;
@@ -128,10 +171,10 @@ header .nav .second .icons .icon {
   color: #333;
   transform: scale(1.1);
 }
-.hero__container-item .image {
-  width: 100vw;
-}
 .hero__container-item .image img {
-  width: 100%;
-  height: calc(100vh - 4rem);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  height: 80%;
 }

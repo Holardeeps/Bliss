@@ -32,8 +32,8 @@ body{
 }
 li{
     list-style-type: none;
-    // font-size: 1.3rem;
 }
+
 
 section{
     display: flex;
@@ -55,6 +55,7 @@ header{
     z-index: 1000;
     transition: .6s;
     border-bottom: .2px solid $dark-border;
+    background-color: $dark-border;
 
     .nav{
         display: flex;
@@ -71,27 +72,62 @@ header{
             
                 font-size: 1.6rem;
                 font-family: "Jim Nightshade", cursive;
-                color: $dark-color;
+                color: #fff;
                 padding-right: 3rem;
+                transition: .7s;
+
+                &:hover{
+                    color: $main-color;
+                }
             }
             ul {
                 display: flex;
-                // position: relative;
-                // align-items: center;
-                // justify-content: space-between;
         
                 li {
-                    // position: relative;
                     padding: 1.2rem 1.2rem;
         
                     a {
-                        color: $dark-border;
+                        color: #fff;
                         font-size: 1.3rem;
                         transition: .8s;
                     }
         
                     &:hover a {
                         color: $main-color;
+                    }
+                }
+                .drop{
+                    padding: 1.2rem .7rem;
+                    font-size: 1.3rem;
+
+                    a{
+                        color: #fff;
+
+                        i{
+                            font-size: .6rem;
+                        }
+                        &:hover{
+                            color: $main-color;
+                        }
+                    }
+
+                    &__down{
+                        display: none;
+                        position: absolute;
+                        background-color: $dark-border;
+                        box-shadow: 0px 8px 16px rgba(0,0,0,.8);
+                        opacity: .9;
+                        
+
+                        a{
+                            color: #fff;
+                            font-size: 1rem;
+                            font-weight: 600;
+                        }
+                    }
+                    &:hover .drop__down{
+                        display: block;
+                        background-color: $dark-border;
                     }
                 }
             }
@@ -102,16 +138,22 @@ header{
                 display: flex;
 
                 .icon{
-                    color: $dark-border;
+                    color: #fff;
                     padding: 1rem;
                     margin-left: .6rem;
                     font-size: 1.5rem;
                     cursor: pointer;
+
+                    &:hover{
+                        background-color: $main-color;
+                        color: $dark-color;
+                    }
                 }
             }
         }
     }
 }
+
 
 #menu-btn{
     display: none;
@@ -122,22 +164,24 @@ header{
     width: 100%;
     position: relative;
     overflow-x: hidden;
+    background: url(../images/home-bg.jpg);
 
     &__container{
         transition: ease-in-out;
         
 
         &-item{
-            // display: flex;
+            display: flex;
+            align-items: center;
             position: relative;
+            justify-content: flex-end;
             transition: ease-in-out;
-            // align-items: center;
-            // flex-wrap: wrap;
 
             .data{
                 position: absolute;
                 top: 30rem;
                 left: 8rem;
+                z-index: 100;
 
                 h2{
                     color: $dark-color;
@@ -161,11 +205,14 @@ header{
                 }
             }
             .image{
-                width: 100vw;
 
                 img{
-                    width: 100%;
-                    height: calc(100vh - 4rem);
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 60%;
+                    // height: calc(100vh - 4rem);
+                    height: 80%;
                 }
             }
         }

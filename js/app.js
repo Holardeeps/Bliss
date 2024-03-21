@@ -4,9 +4,13 @@ var swiper = new Swiper(".hero-slider", {
     grabCursor: true,
     autoplay: true,
     speed: 1000,
+    effect: 'fade',
 
     autoplay: {
-        delay: 3500,
+        delay: 2500,
         disableOnInteraction: true,
+    },
+    fadeEffect: {
+        crossFade: true
     },
 });
