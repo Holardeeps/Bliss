@@ -169,6 +169,85 @@ header{
             }
         }
     }
+
+    .cart{
+        display: none;
+        position: absolute;
+        transform: translateX(-50%);
+        right: -12rem;
+        width: 25rem;
+        background: gray;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+        padding: 2rem;
+        text-align: center;
+
+        &-box{
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            // justify-content: space-around;
+
+            // .bx.times{
+            //     position: absolute;
+            //     top: 50%;
+            //     right: 2rem;
+            //     transform: translateX(-50%);
+            //     font-size: 2rem;
+            //     color: $dark-color;
+            //     cursor: pointer;
+
+            //     &:hover{
+            //         color: black;
+            //     }
+            // }
+            img{
+                height: 4rem;
+                width: 4rem;
+            }
+            .data{
+                position: relative;
+                margin-right: 2rem;
+
+                h3{
+                    font-size: 1rem;
+                    color: $dark-color;
+                    padding-bottom: .6rem;
+                }
+                span{
+                    font-size: .8rem;
+                }
+                .multiply{
+                    padding-left: .5rem;
+                    padding-right: .5rem;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .total{
+            border-top: 1px solid $dark-border;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        a{
+            padding-top: 0;
+            font-size: 1.3rem;
+
+            &:hover{
+                background-color: $dark-border;
+                color: $main-color;
+            }
+        }
+
+        &.active{
+            display: block;
+            transition: .5s ease-in;
+        }
+    }
+
+
     .login-form{
         display: none;
         position: absolute;
@@ -239,6 +318,7 @@ header{
         }
         &.active{
             display: block;
+            transition: .4s linear;
         }
 
     }

@@ -141,6 +141,62 @@ header .nav .second .icons .icon:hover {
   background-color: #F1558E;
   color: #A22657;
 }
+header .cart {
+  display: none;
+  position: absolute;
+  transform: translateX(-50%);
+  right: -12rem;
+  width: 25rem;
+  background: gray;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  text-align: center;
+}
+header .cart-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+header .cart-box img {
+  height: 4rem;
+  width: 4rem;
+}
+header .cart-box .data {
+  position: relative;
+  margin-right: 2rem;
+}
+header .cart-box .data h3 {
+  font-size: 1rem;
+  color: #A22657;
+  padding-bottom: 0.6rem;
+}
+header .cart-box .data span {
+  font-size: 0.8rem;
+}
+header .cart-box .data .multiply {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-weight: bold;
+}
+header .cart .total {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+header .cart a {
+  padding-top: 0;
+  font-size: 1.3rem;
+}
+header .cart a:hover {
+  background-color: #333;
+  color: #F1558E;
+}
+header .cart.active {
+  display: block;
+  transition: 0.5s ease-in;
+}
 header .login-form {
   display: none;
   position: absolute;
@@ -207,6 +263,7 @@ header .login-form p a:hover {
 }
 header .login-form.active {
   display: block;
+  transition: 0.4s linear;
 }
 
 #menu-btn {
